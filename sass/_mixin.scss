@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+}
+
+.header{
+   &__title{
+
+   } 
+
+   &__container{
+     
+   }
+
+   &__container-title{
+
+   }
+
+   &__container-numbers{
+
+   }
+
+   &__container-themes{
+
+   }
+
+   &__circle{
+
+   }
+}
+
+.calculator{
+
+    &__display{
+
+    }
+
+    &__values{
+
+    }
+
+    &__total{
+
+    }
+
+    &__board{
+
+    }
+
+    &__button{
+
+    }
+
+    &__button--delete{
+
+    }
+
+    &__button--add{
+
+    }
+
+    &__button--substract{
+
+    }
+
+    &__button--point{
+
+    }
+
+    &__button--division{
+
+    }
+
+    &__button--multiplication{
+
+    }
+
+    &__button--reset{
+
+    }
+
+    &__button--equals{
+
+    }
+}
+
+footer{ 
+    p{
+
+    }
+
+    h4{
+
+    }
+
+    a{
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+
