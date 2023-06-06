@@ -10,5 +10,81 @@ $theme3: (
     key-shadow: hsl(290, 70%, 36%),
     light-yellow: hsl(52, 100%, 62%),
     very-dark-blue: hsl(198, 20%, 13%),
-    White-color: hsl(0, 0%, 100%)
+    white-color: hsl(0, 0%, 100%)
 );
+
+body {
+    background-color: map-get($theme3, main-background);
+}
+
+
+.header__title,  .header__container-title, .header__container-numbers, .calculator__total, .calculator__values, .calculator__button{
+    color: map-get($theme3, light-yellow);
+}
+
+.header {
+    &__container-themes {
+        background-color: map-get($theme3, keypad-toggle-background);
+    }
+
+    &__circle {
+        background-color: map-get($theme3, equals-background);
+
+        &:hover{
+            background-color: #98fcfc;
+        }
+    }
+}
+
+.calculator {
+    &__display {
+        background-color: map-get($theme3, display-background);
+    }
+
+    &__board {
+        background-color: map-get($theme3, keypad-toggle-background);
+    }
+
+    &__button {
+        background-color: map-get($theme3, key-background);
+        border-color: map-get($theme3, key-shadow);
+
+        &:hover{
+          background-color: #7434b4;  
+          border-color: #881498;
+        }
+    }
+
+    &__button--delete, &__button--reset{
+        background-color: map-get($theme3, remove-background);
+        border-color: map-get($theme3, remove-shadow);
+        color: map-get($theme3, white-color);
+
+        &:hover{
+            background-color: #8834b4;
+            border-color: #c018f0;
+        }
+    }
+
+    &__button--equals {
+        background-color: map-get($theme3, equals-background);
+        border-color: map-get($theme3, equals-shadow);
+        color: map-get($theme3, very-dark-blue);
+
+        &:hover{
+            background-color: #98fcfc;
+            border-color: #6cf8f0;
+        }
+    }
+
+}
+
+footer {
+    p{
+        color: map-get($theme3, remove-background);
+    }
+
+    a {
+        color: map-get($theme3, equals-background);
+    }
+}
