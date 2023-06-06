@@ -11,3 +11,103 @@ $theme1: (
     dark-grayish-blue: hsl(221, 14%, 31%),
     white-color: hsl(0, 0%, 100%)
 );
+
+body {
+
+}
+
+.container {
+
+}
+
+.header, main {
+
+}
+
+.header {
+    &__title {
+
+    }
+
+    &__container {
+
+    }
+
+    &__container-title {
+
+    }
+
+    &__container-div {
+
+    }
+
+    &__container-numbers {
+
+    }
+
+    &__container-themes {
+
+    }
+
+    &__circle {
+
+    }
+}
+
+main {
+
+}
+
+.calculator {
+    &__display {
+
+    }
+
+    &__values {
+
+    }
+
+    &__total {
+
+    }
+
+    &__board {
+
+    }
+
+    &__button {
+
+    }
+
+    &__button--delete {
+
+    }
+
+    &__button--add {
+
+    }
+
+    &__button--substract {
+
+    }
+
+    &__button--point {
+
+    }
+
+    &__button--division {
+
+    }
+
+    &__button--multiplication {
+
+    }
+
+    &__button--reset {
+
+    }
+
+    &__button--equals {
+
+    }
+}
