@@ -13,21 +13,21 @@ $theme3: (
     white-color: hsl(0, 0%, 100%)
 );
 
-body {
+body-theme-3 {
     background-color: map-get($theme3, main-background);
 }
 
 
-.header__title,  .header__container-title, .header__container-numbers, .calculator__total, .calculator__values, .calculator__button{
+.header__title-theme-3,  .header__container-title-theme-3, .header__container-numbers-theme-3, .calculator__total-theme-3, .calculator__values-theme-3, .calculator__button-theme-3{
     color: map-get($theme3, light-yellow);
 }
 
-.header {
-    &__container-themes {
+.header-theme-3 {
+    &__container-themes-theme-3 {
         background-color: map-get($theme3, keypad-toggle-background);
     }
 
-    &__circle {
+    &__circle-theme-3 {
         background-color: map-get($theme3, equals-background);
 
         &:hover{
@@ -36,16 +36,16 @@ body {
     }
 }
 
-.calculator {
-    &__display {
+.calculator-theme-3 {
+    &__display-theme-3 {
         background-color: map-get($theme3, display-background);
     }
 
-    &__board {
+    &__board-theme-3 {
         background-color: map-get($theme3, keypad-toggle-background);
     }
 
-    &__button {
+    &__button-theme-3 {
         background-color: map-get($theme3, key-background);
         border-color: map-get($theme3, key-shadow);
 
@@ -55,7 +55,7 @@ body {
         }
     }
 
-    &__button--delete, &__button--reset{
+    &__button--delete-theme-3, &__button--reset-theme-3{
         background-color: map-get($theme3, remove-background);
         border-color: map-get($theme3, remove-shadow);
         color: map-get($theme3, white-color);
@@ -66,7 +66,7 @@ body {
         }
     }
 
-    &__button--equals {
+    &__button--equals-theme-3 {
         background-color: map-get($theme3, equals-background);
         border-color: map-get($theme3, equals-shadow);
         color: map-get($theme3, very-dark-blue);
@@ -80,11 +80,11 @@ body {
 }
 
 footer {
-    p{
+    .p-theme-3{
         color: map-get($theme3, remove-background);
     }
 
-    a {
+    .a-theme-3 {
         color: map-get($theme3, equals-background);
     }
 }

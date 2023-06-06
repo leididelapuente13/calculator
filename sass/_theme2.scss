@@ -12,16 +12,16 @@ $theme2: (
     white-color:hsl(0, 0%, 100%)
 );
 
-body {
+body-theme-2 {
     background-color: map-get($theme2, main-background);
 }
 
-.header {
-    &__container-themes {
+.header-theme-1 {
+    &__container-themes-2 {
         background-color: map-get($theme2, keypad-toggle-background);
     }
 
-    &__circle {
+    &__circle-theme-2 {
         background-color: map-get($theme2, equals-background);
 
         &:hover{
@@ -30,16 +30,16 @@ body {
     }
 }
 
-.calculator {
-    &__display {
+.calculator-theme-1{
+    &__display-theme-2 {
         background-color: map-get($theme2, display-background);
     }
 
-    &__board {
+    &__board-theme-2 {
         background-color: map-get($theme2, keypad-toggle-background);
     }
 
-    &__button {
+    &__button-theme-2 {
         color: map-get($theme2, very-dark-grayish-yellow);
         background-color: map-get($theme2, key-background);
         border-color: map-get($theme2, key-shadow);
@@ -50,20 +50,20 @@ body {
         }
     }
 
-    &__button--delete, &__button--reset {
+    &__button--delete-theme-2, &__button--reset-theme-2 {
         background-color: map-get($theme2, remove-background);
         border-color: map-get($theme2, remove-shadow);
         color: map-get($theme2, white-color);
     }
 
-    &__button--reset, &__button--delete{
+    &__button--reset-theme-2, &__button--delete-theme-2{
         &:hover{
             background-color: #68b4bc;
             border-color: #1c6470;
         }
     }
 
-    &__button--equals {
+    &__button--equals-theme-2 {
         background-color: map-get($theme2, equals-background);
         border-color: map-get($theme2, equals-shadow);
         color: map-get($theme2, white-color);
@@ -76,12 +76,12 @@ body {
 
 }
 
-.header__title,  .header__container-title, .header__container-numbers, .calculator__total, .calculator__values{
+.header__title-theme-2,  .header__container-title-theme-2, .header__container-numbers-theme-2, .calculator__total-theme-2, .calculator__values-theme-2{
     color: map-get($theme2, very-dark-grayish-yellow);
 }
 
 footer {
-    a {
+    .a-theme-2 {
         color: map-get($theme2, equals-background);
     }
 }
