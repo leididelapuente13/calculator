@@ -57,18 +57,29 @@ main {
         display: flex;
         justify-content: space-around;
         font-weight: 700;
+        margin-bottom: 0.2rem;
     }
 
     &__container-themes {
-        padding: 0.2rem;
+        padding: 0.3rem;
         border-radius: 0.8rem;
-        height: 20px;
+        width: 70px;
+        height: 24px;
         display: flex;
         //este es el que se debe editar desde javascript
         justify-content: flex-start;
         align-items: center;
+        transition: justify-content 0.5 ease 1s;
     }
 
+    &__container-themes-center{
+        justify-content: center;
+    }
+
+    &__container-themes-right{
+        justify-content: flex-end;
+    }
+    
     &__circle {
         height: 18px;
         width: 18px;

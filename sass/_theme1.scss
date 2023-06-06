@@ -3,8 +3,8 @@ $theme1: (
     keypad-toggle-background:hsl(223, 31%, 20%),
     display-background: hsl(224, 36%, 15%),
     remove-background: hsl(225, 21%, 49%),
-    remove-shadow: hsl(224, 28%, 35%),
-    equals-background: hsl(6, 63%, 50%),
+    remove-shadow: hsl(223, 28%, 35%),
+    equals-circle-background: hsl(6, 63%, 50%),
     equals-shadow: hsl(6, 70%, 34%),
     key-background: hsl(30, 25%, 89%),
     key-shadow: hsl(28, 16%, 65%),
@@ -13,101 +13,73 @@ $theme1: (
 );
 
 body {
-
-}
-
-.container {
-
-}
-
-.header, main {
-
+    background-color: map-get($theme1, main-background);
 }
 
 .header {
-    &__title {
-
-    }
-
-    &__container {
-
-    }
-
-    &__container-title {
-
-    }
-
-    &__container-div {
-
-    }
-
-    &__container-numbers {
-
-    }
-
     &__container-themes {
-
+        background-color: map-get($theme1, keypad-toggle-background);
     }
 
     &__circle {
+        background-color: map-get($theme1, equals-circle-background);
 
+        &:hover{
+            background-color: #ff6c5c;
+        }
     }
-}
-
-main {
-
 }
 
 .calculator {
     &__display {
-
-    }
-
-    &__values {
-
-    }
-
-    &__total {
-
+        background-color: map-get($theme1, display-background);
     }
 
     &__board {
-
+        background-color: map-get($theme1, keypad-toggle-background);
     }
 
     &__button {
+        color: map-get($theme1, dark-grayish-blue);
+        background-color: map-get($theme1, key-background);
+        border-color: map-get($theme1, key-shadow);
 
+        &:hover{
+          background-color: #fcf8ff;  
+          border-color: #b8a49c;
+        }
     }
 
-    &__button--delete {
-
+    &__button--delete, &__button--reset {
+        background-color: map-get($theme1, remove-background);
+        border-color: map-get($theme1, remove-shadow);
     }
 
-    &__button--add {
-
-    }
-
-    &__button--substract {
-
-    }
-
-    &__button--point {
-
-    }
-
-    &__button--division {
-
-    }
-
-    &__button--multiplication {
-
-    }
-
-    &__button--reset {
-
+    &__button--reset, &__button--delete{
+        &:hover{
+            background-color: #a8b4e4;
+            border-color: #484c74;
+        }
     }
 
     &__button--equals {
+        background-color: map-get($theme1, equals-circle-background);
+        border-color: map-get($theme1, equals-shadow);
 
+        &:hover{
+            background-color: #ff6c5c;
+            border-color: #943018;
+        }
+    }
+
+}
+
+.header__title,  .header__container-title, .header__container-numbers,  .calculator__button--delete, .calculator__button--reset, .calculator__button--equals, .calculator__total, .calculator__values{
+    color: map-get($theme1, white-color);
+}
+
+footer {
+    a {
+        color: map-get($theme1, display-background);
     }
 }

@@ -53,14 +53,23 @@ main {
   display: flex;
   justify-content: space-around;
   font-weight: 700;
+  margin-bottom: 0.2rem;
 }
 .header__container-themes {
-  padding: 0.2rem;
+  padding: 0.3rem;
   border-radius: 0.8rem;
-  height: 20px;
+  width: 70px;
+  height: 24px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  transition: justify-content 0.5 ease 1s;
+}
+.header__container-themes-center {
+  justify-content: center;
+}
+.header__container-themes-right {
+  justify-content: flex-end;
 }
 .header__circle {
   height: 18px;
