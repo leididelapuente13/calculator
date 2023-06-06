@@ -4,10 +4,84 @@ $theme2: (
     display-background: hsl(0, 0%, 93%),
     remove-background: hsl(185, 42%, 37%),
     remove-shadow: hsl(185, 58%, 25%),
-    equals-background: hsl(25, 99%, 27%),
-    equals-shadow: hsl(25, 98%, 40%),
-    key-background: hsl(35, 11%, 61%),
-    key-shadow: hsl(45, 7%, 89%),
+    equals-background: hsl(25, 98%, 40%),
+    equals-shadow: hsl(25, 99%, 27%),
+    key-background: hsl(45, 7%, 89%),
+    key-shadow: hsl(35, 11%, 61%),
     very-dark-grayish-yellow: hsl(60, 10%, 19%),
     white-color:hsl(0, 0%, 100%)
 );
+
+body {
+    background-color: map-get($theme2, main-background);
+}
+
+.header {
+    &__container-themes {
+        background-color: map-get($theme2, keypad-toggle-background);
+    }
+
+    &__circle {
+        background-color: map-get($theme2, equals-background);
+
+        &:hover{
+            background-color: #ff8c3c;
+        }
+    }
+}
+
+.calculator {
+    &__display {
+        background-color: map-get($theme2, display-background);
+    }
+
+    &__board {
+        background-color: map-get($theme2, keypad-toggle-background);
+    }
+
+    &__button {
+        color: map-get($theme2, very-dark-grayish-yellow);
+        background-color: map-get($theme2, key-background);
+        border-color: map-get($theme2, key-shadow);
+
+        &:hover{
+          background-color: #fcf8ff;  
+          border-color: #a89c8c;
+        }
+    }
+
+    &__button--delete, &__button--reset {
+        background-color: map-get($theme2, remove-background);
+        border-color: map-get($theme2, remove-shadow);
+        color: map-get($theme2, white-color);
+    }
+
+    &__button--reset, &__button--delete{
+        &:hover{
+            background-color: #68b4bc;
+            border-color: #1c6470;
+        }
+    }
+
+    &__button--equals {
+        background-color: map-get($theme2, equals-background);
+        border-color: map-get($theme2, equals-shadow);
+        color: map-get($theme2, white-color);
+
+        &:hover{
+            background-color: #ff8c3c;
+            border-color: #8c3810;
+        }
+    }
+
+}
+
+.header__title,  .header__container-title, .header__container-numbers, .calculator__total, .calculator__values{
+    color: map-get($theme2, very-dark-grayish-yellow);
+}
+
+footer {
+    a {
+        color: map-get($theme2, equals-background);
+    }
+}

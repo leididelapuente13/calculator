@@ -137,4 +137,60 @@ footer a {
   color: hsl(228, 45%, 44%);
 }
 
+body {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.header__container-themes {
+  background-color: hsl(0, 5%, 81%);
+}
+.header__circle {
+  background-color: hsl(25, 98%, 40%);
+}
+.header__circle:hover {
+  background-color: #ff8c3c;
+}
+
+.calculator__display {
+  background-color: hsl(0, 0%, 93%);
+}
+.calculator__board {
+  background-color: hsl(0, 5%, 81%);
+}
+.calculator__button {
+  color: hsl(60, 10%, 19%);
+  background-color: hsl(45, 7%, 89%);
+  border-color: hsl(35, 11%, 61%);
+}
+.calculator__button:hover {
+  background-color: #fcf8ff;
+  border-color: #a89c8c;
+}
+.calculator__button--delete, .calculator__button--reset {
+  background-color: hsl(185, 42%, 37%);
+  border-color: hsl(185, 58%, 25%);
+  color: hsl(0, 0%, 100%);
+}
+.calculator__button--reset:hover, .calculator__button--delete:hover {
+  background-color: #68b4bc;
+  border-color: #1c6470;
+}
+.calculator__button--equals {
+  background-color: hsl(25, 98%, 40%);
+  border-color: hsl(25, 99%, 27%);
+  color: hsl(0, 0%, 100%);
+}
+.calculator__button--equals:hover {
+  background-color: #ff8c3c;
+  border-color: #8c3810;
+}
+
+.header__title, .header__container-title, .header__container-numbers, .calculator__total, .calculator__values {
+  color: hsl(60, 10%, 19%);
+}
+
+footer a {
+  color: hsl(25, 98%, 40%);
+}
+
 /*# sourceMappingURL=style.css.map */
