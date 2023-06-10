@@ -4,6 +4,7 @@ let values = document.querySelector(".calculator__values");
 let btnAdd = document.querySelector(".calculator__button--add");
 let btnEquals = document.querySelector(".calculator__button--equals");
 let arrayValues = [];
+let result = 0;
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
@@ -73,30 +74,38 @@ function multiplication(num1, num2) {
 
 function operate(button, array, btnEquals) {
     if (button.innerHTML === "+") {
-        console.log("sumando...");
         btnEquals.addEventListener("click", ()=>{
             let arrayRes = sliceArray(array, "+");
-            console.log(add(arrayRes[0], arrayRes[1]));
+            result = add(arrayRes[0], arrayRes[1]);
+            displayResult(result);
         });
     }else if (button.innerHTML === "-") {
         console.log("restando...");
         btnEquals.addEventListener("click", ()=>{
             let arrayRes = sliceArray(array, "-");
-            console.log(subtract(arrayRes[0], arrayRes[1]));
+            result = subtract(arrayRes[0], arrayRes[1]);
+            displayResult(result);
         });
     }else if (button.innerHTML === "/") {
         console.log("dividiendo...");
         btnEquals.addEventListener("click", ()=>{
             let arrayRes = sliceArray(array, "/");
-            console.log(division(arrayRes[0], arrayRes[1]));
+            result = division(arrayRes[0], arrayRes[1]);
+            displayResult(result);
         });
     }else if (button.innerHTML === "*") {
         console.log("multiplicando...");
         btnEquals.addEventListener("click", ()=>{
             let arrayRes = sliceArray(array, "*");
-            console.log(multiplication(arrayRes[0], arrayRes[1]));
+            result = multiplication(arrayRes[0], arrayRes[1]);
+            displayResult(result);
         });
     }
+}
+
+function displayResult(result){
+   values.innerHTML = "";
+   display.innerHTML = result; 
 }
 
 
