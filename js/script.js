@@ -11,18 +11,20 @@ let result = 0;
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         let array = displayValues(button);
-        operate(button, array, btnEquals)
+        operate(button, array, btnEquals);
     });
 });
 
-btnReset.addEventListener("click", ()=>{
+btnReset.addEventListener("click", reset);
+
+function reset(){
     arrayValues = [];
     array = [];
     console.log(arrayValues);
     console.log(array);
     display.innerHTML = "";
     values.innerHTML = "";
-});
+}
 
 function displayValues(button) {
     if (button.textContent !== "DEL" && button.textContent !== "RESET") {
@@ -88,7 +90,6 @@ function operate(button, array, btnEquals) {
             let arrayRes = sliceArray(array, "+");
             result = add(arrayRes[0], arrayRes[1]);
             displayResult(result);
-            arrayRes = [];
         });
     }else if (button.innerHTML === "-") {
         console.log("restando...");
