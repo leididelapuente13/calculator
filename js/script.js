@@ -5,8 +5,10 @@ let btnAdd = document.querySelector(".calculator__button--add");
 let btnEquals = document.querySelector(".calculator__button--equals");
 let btnReset = document.querySelector(".calculator__button--reset");
 let btnDel = document.querySelector(".calculator__button--delete");
+let btnPoint = document.querySelector(".calculator__button--point");
 let arrayValues = [];
 let result = 0;
+let clicked = false;
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
@@ -16,6 +18,13 @@ buttons.forEach(button => {
 });
 
 btnReset.addEventListener("click", reset);
+
+btnPoint.addEventListener("click", ()=>{
+    if(!clicked){
+        btnPoint.disabled = true;
+        clicked = true;
+    }
+});
 
 function reset(){
     arrayValues = [];
@@ -32,7 +41,6 @@ function displayValues(button) {
         arrayValues.push(display.innerHTML);
         values.textContent = arrayValues.join("");
     }
-
     return arrayValues;
 }
 
@@ -86,6 +94,8 @@ function multiplication(num1, num2) {
 
 function operate(button, array, btnEquals) {
     if (button.innerHTML === "+") {
+        clicked = false;
+        btnPoint.disabled = false;
         btnEquals.addEventListener("click", ()=>{
             let arrayRes = sliceArray(array, "+");
             result = add(arrayRes[0], arrayRes[1]);
@@ -122,6 +132,8 @@ function displayResult(result){
    values.innerHTML = "";
    display.innerHTML = result; 
 }
+
+
 
 
 
