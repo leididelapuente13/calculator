@@ -7,8 +7,6 @@ let btnReset = document.querySelector(".calculator__button--reset");
 let btnDel = document.querySelector(".calculator__button--delete");
 let btnPoint = document.querySelector(".calculator__button--point");
 let arrayValues = [];
-let result = 0;
-let clicked = false;
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
@@ -20,6 +18,7 @@ buttons.forEach(button => {
 btnReset.addEventListener("click", reset);
 
 btnPoint.addEventListener("click", ()=>{
+    let clicked = false;
     if(!clicked){
         btnPoint.disabled = true;
         clicked = true;
@@ -29,8 +28,10 @@ btnPoint.addEventListener("click", ()=>{
 function reset(){
     arrayValues = [];
     array = [];
-    console.log(arrayValues);
-    console.log(array);
+    if(clicked === true){
+        btnPoint.disabled = false;
+        clicked = false;
+    }
     display.innerHTML = "";
     values.innerHTML = "";
 }
@@ -41,8 +42,17 @@ function displayValues(button) {
         arrayValues.push(display.innerHTML);
         values.textContent = arrayValues.join("");
     }
+
     return arrayValues;
 }
+
+btnDel.addEventListener("click", ()=>{
+    arrayValues.pop();
+    if(arrayValues.length === 0){
+        display.innerHTML = "";
+    }
+    values.innerHTML = arrayValues.join("");
+});
 
 function sliceArray(array, ref) {
     let index = array.indexOf(ref);
@@ -93,6 +103,7 @@ function multiplication(num1, num2) {
 }
 
 function operate(button, array, btnEquals) {
+    let result = 0;
     if (button.innerHTML === "+") {
         clicked = false;
         btnPoint.disabled = false;
@@ -102,7 +113,8 @@ function operate(button, array, btnEquals) {
             displayResult(result);
         });
     }else if (button.innerHTML === "-") {
-        console.log("restando...");
+        clicked = false;
+        btnPoint.disabled = false;
         btnEquals.addEventListener("click", ()=>{
             let arrayRes = sliceArray(array, "-");
             result = subtract(arrayRes[0], arrayRes[1]);
@@ -110,7 +122,8 @@ function operate(button, array, btnEquals) {
             arrayRes = [];
         });
     }else if (button.innerHTML === "/") {
-        console.log("dividiendo...");
+        clicked = false;
+        btnPoint.disabled = false;
         btnEquals.addEventListener("click", ()=>{
             let arrayRes = sliceArray(array, "/");
             result = division(arrayRes[0], arrayRes[1]);
@@ -118,7 +131,8 @@ function operate(button, array, btnEquals) {
             arrayRes = [];
         });
     }else if (button.innerHTML === "*") {
-        console.log("multiplicando...");
+        clicked = false;
+        btnPoint.disabled = false;
         btnEquals.addEventListener("click", ()=>{
             let arrayRes = sliceArray(array, "*");
             result = multiplication(arrayRes[0], arrayRes[1]);
