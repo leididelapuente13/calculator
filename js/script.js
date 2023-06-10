@@ -2,46 +2,37 @@ let buttons = document.querySelectorAll(".calculator__button");
 let display = document.querySelector(".calculator__total");
 let values = document.querySelector(".calculator__values");
 let btnAdd = document.querySelector(".calculator__button--add");
-let arrayn1 = [];
+let btnEquals = document.querySelector(".calculator__button--equals");
+let arrayValues = [];
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
-        if (button.textContent !== "DEL" && button.textContent !== "RESET") {
-            display.innerHTML = button.textContent;
-            let n1;
-            let n2;
-            arrayn1.push(display.textContent);
-            values.textContent = arrayn1.join("");
-            
-            if (button.innerHTML === "+") {
-                arrayn1.pop();
-                n1 = arrayn1.toString().replace(/[, ]/g, "");
-                arrayn1 = [];
-                arrayn1.push(n1);
-                arrayn1.push("+");
-            } else if (button.innerHTML === "=") {
-                arrayn1.pop();
-                n2 = arrayn1.slice(2);
-                n2 = n2.map(String);
-                n2 = n2.join("");
-                let cantEle = arrayn1.length - 2;
-                arrayn1.splice(2, cantEle);
-                arrayn1.push(n2);
-            }
-
-        } else {
-            display.innerHTML = "";
-            if (button.textContent === "DEL") {
-
-            } else if (button.textContent === "RESET") {
-
-
-            } else if (button.textContent === "=") {
-
-            }
-        }
+        let array = displayValues(button);
+        operate(button, array, btnEquals)
     });
 });
+
+function displayValues(button) {
+    if (button.textContent !== "DEL" && button.textContent !== "RESET") {
+        display.innerHTML = button.textContent;
+        arrayValues.push(display.innerHTML);
+        values.textContent = arrayValues.join("");
+    }
+
+    return arrayValues;
+}
+
+function sliceArray(array, ref) {
+    let index = array.indexOf(ref);
+    let firstHalf = array.slice(0, index);
+    let secondHalf = array.slice(index + 1);
+    firstHalf = firstHalf.join("");
+    secondHalf = secondHalf.join("");
+    firstHalf = parseFloat(firstHalf);
+    secondHalf = parseFloat(secondHalf);
+    let newArray = [firstHalf, secondHalf];
+    return newArray;
+}
 
 function round(result) {
     let res = result.toString();
@@ -72,5 +63,42 @@ function division(num1, num2) {
     result = round(result);
     return result;
 }
+
+function multiplication(num1, num2) {
+    let result = 0;
+    result = num1 * num2;
+    result = round(result);
+    return result;
+}
+
+function operate(button, array, btnEquals) {
+    if (button.innerHTML === "+") {
+        console.log("sumando...");
+        btnEquals.addEventListener("click", ()=>{
+            let arrayRes = sliceArray(array, "+");
+            console.log(add(arrayRes[0], arrayRes[1]));
+        });
+    }else if (button.innerHTML === "-") {
+        console.log("restando...");
+        btnEquals.addEventListener("click", ()=>{
+            let arrayRes = sliceArray(array, "-");
+            console.log(subtract(arrayRes[0], arrayRes[1]));
+        });
+    }else if (button.innerHTML === "/") {
+        console.log("dividiendo...");
+        btnEquals.addEventListener("click", ()=>{
+            let arrayRes = sliceArray(array, "/");
+            console.log(division(arrayRes[0], arrayRes[1]));
+        });
+    }else if (button.innerHTML === "*") {
+        console.log("multiplicando...");
+        btnEquals.addEventListener("click", ()=>{
+            let arrayRes = sliceArray(array, "*");
+            console.log(multiplication(arrayRes[0], arrayRes[1]));
+        });
+    }
+}
+
+
 
 
