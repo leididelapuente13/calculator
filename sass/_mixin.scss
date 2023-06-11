@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background ease-out 0.5s, color ease-out 0.5s;
 }
 
 body {
@@ -14,12 +15,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2rem auto;
+    margin-top: 1rem;
 }
 
 .header,
 main {
-    width: 80%;
+    width: 85%;
     max-width: 500px;
 }
 
@@ -69,17 +70,16 @@ main {
         //este es el que se debe editar desde javascript
         justify-content: flex-start;
         align-items: center;
-        transition: justify-content 0.5 ease 1s;
     }
 
-    &__container-themes-center{
+    &__container-themes-center {
         justify-content: center;
     }
 
-    &__container-themes-right{
+    &__container-themes-right {
         justify-content: flex-end;
     }
-    
+
     &__circle {
         height: 18px;
         width: 18px;
@@ -87,9 +87,6 @@ main {
     }
 }
 
-main {
-    width: 80%;
-}
 
 .calculator {
     display: flex;
@@ -130,7 +127,7 @@ main {
     &__button {
         padding: 1rem;
         font-weight: 700;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         text-align: center;
         border: none;
         border-radius: 0.6rem;
@@ -147,13 +144,18 @@ main {
 }
 
 footer {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
+    line-height: 1.4;
 
-    p {
+    p{
+        text-align: center;
         font-weight: 700;
+        font-size: 1.1rem;
     }
+}
 
-    a {
-        color: hsl(228, 45%, 44%);
+@media (max-width: 425px) {
+    .header__container{
+        margin-right: 1.9rem;
     }
 }

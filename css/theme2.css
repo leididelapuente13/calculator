@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: background ease-out 0.5s, color ease-out 0.5s;
 }
 
 body {
@@ -14,12 +15,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2rem auto;
+  margin-top: 1rem;
 }
 
 .header,
 main {
-  width: 80%;
+  width: 85%;
   max-width: 500px;
 }
 
@@ -63,7 +64,6 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  transition: justify-content 0.5 ease 1s;
 }
 .header__container-themes-center {
   justify-content: center;
@@ -75,10 +75,6 @@ main {
   height: 18px;
   width: 18px;
   border-radius: 50%;
-}
-
-main {
-  width: 80%;
 }
 
 .calculator {
@@ -114,7 +110,7 @@ main {
 .calculator__button {
   padding: 1rem;
   font-weight: 700;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   text-align: center;
   border: none;
   border-radius: 0.6rem;
@@ -128,67 +124,74 @@ main {
 }
 
 footer {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
+  line-height: 1.4;
 }
 footer p {
+  text-align: center;
   font-weight: 700;
-}
-footer a {
-  color: hsl(228, 45%, 44%);
+  font-size: 1.1rem;
 }
 
+@media (max-width: 425px) {
+  .header__container {
+    margin-right: 1.9rem;
+  }
+}
 body {
-  background-color: hsl(222, 26%, 31%);
+  background-color: hsl(0, 0%, 90%);
 }
 
-.header__container-themes {
-  background-color: hsl(223, 31%, 20%);
+.header__container-themes-2 {
+  background-color: hsl(0, 5%, 81%);
 }
 .header__circle {
-  background-color: hsl(6, 63%, 50%);
+  background-color: hsl(25, 98%, 40%);
 }
 .header__circle:hover {
-  background-color: #ff6c5c;
+  background-color: #ff8c3c;
 }
 
 .calculator__display {
-  background-color: hsl(224, 36%, 15%);
+  background-color: hsl(0, 0%, 93%);
 }
 .calculator__board {
-  background-color: hsl(223, 31%, 20%);
+  background-color: hsl(0, 5%, 81%);
 }
 .calculator__button {
-  color: hsl(221, 14%, 31%);
-  background-color: hsl(30, 25%, 89%);
-  border-color: hsl(28, 16%, 65%);
+  color: hsl(60, 10%, 19%);
+  background-color: hsl(45, 7%, 89%);
+  border-color: hsl(35, 11%, 61%);
 }
 .calculator__button:hover {
   background-color: #fcf8ff;
-  border-color: #b8a49c;
+  border-color: #a89c8c;
 }
 .calculator__button--delete, .calculator__button--reset {
-  background-color: hsl(225, 21%, 49%);
-  border-color: hsl(223, 28%, 35%);
+  background-color: hsl(185, 42%, 37%);
+  border-color: hsl(185, 58%, 25%);
+  color: hsl(0, 0%, 100%);
 }
 .calculator__button--reset:hover, .calculator__button--delete:hover {
-  background-color: #a8b4e4;
-  border-color: #484c74;
+  background-color: #68b4bc;
+  border-color: #1c6470;
 }
 .calculator__button--equals {
-  background-color: hsl(6, 63%, 50%);
-  border-color: hsl(6, 70%, 34%);
+  background-color: hsl(25, 98%, 40%);
+  border-color: hsl(25, 99%, 27%);
+  color: hsl(0, 0%, 100%);
 }
 .calculator__button--equals:hover {
-  background-color: #ff6c5c;
-  border-color: #943018;
+  background-color: #ff8c3c;
+  border-color: #8c3810;
 }
 
-.header__title, .header__container-title, .header__container-numbers, .calculator__button--delete, .calculator__button--reset, .calculator__button--equals, .calculator__total, .calculator__values {
-  color: hsl(0, 0%, 100%);
+.header__title, .header__container-title, .header__container-numbers, .calculator__total, .calculator__values {
+  color: hsl(60, 10%, 19%);
 }
 
 footer a {
-  color: hsl(224, 36%, 15%);
+  color: hsl(25, 98%, 40%);
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=theme2.css.map */

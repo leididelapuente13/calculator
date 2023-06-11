@@ -12,6 +12,8 @@ $theme1: (
     white-color: hsl(0, 0%, 100%)
 );
 
+@use 'mixin';
+
 body {
     background-color: map-get($theme1, main-background);
 }
@@ -81,5 +83,13 @@ body {
 footer {
     a {
         color: map-get($theme1, display-background);
+    }
+
+    p {
+        color: map-get($theme1, key-background);
+    }
+
+    a {
+        color: map-get($theme1, remove-background);
     }
 }
