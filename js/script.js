@@ -11,7 +11,7 @@ let arrayValues = [];
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         let array = displayValues(button);
-        let res = operate(button, array, btnEquals);
+        operate(button, array, btnEquals);
     });
 });
 
@@ -183,6 +183,10 @@ function validate(result) {
         displayResult(result)
     }
 }
+
+
+//to change the theme
+
 let linkStyle = document.querySelector(".link-style")
 let counter = 1;
 themesContainer.addEventListener("click", () => {

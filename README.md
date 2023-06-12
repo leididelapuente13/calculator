@@ -12,9 +12,7 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -28,18 +26,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](images/cover.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/leidi2004/calculator)
+- Live Site URL: [Add live site URL here](https://leidi2004.github.io/calculator/)
 
 ## My process
 
@@ -47,45 +40,46 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - Sass
-- CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I read about some array's methods, and i used join.
 
-To see how you can add code snippets, see below:
+If you see the projects i did in javascript in the past weeks you'll see that i have all the important code in an event listener of a button or in an input and just some functions. This time at the beginning i was doing the same, but i'm using an IA to give me feedback and corrections of my code, and I follow its correction this time and I encapsulate my code into functions.  
+ 
+This is my main code:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        let array = displayValues(button);
+        operate(button, array, btnEquals);
+    });
+});
+
+btnReset.addEventListener("click", reset);
+
+btnPoint.addEventListener("click", () => {
+    let clicked = false;
+    if (!clicked) {
+        btnPoint.disabled = true;
+        clicked = true;
+    }
+});
 ```
+
+I'm learning and improving while coding, I still have to get use to add comments to my code, organize it better and give to the variables better names. 
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I want to keep doing projects where I have to use array and its methods because when I coded in Java i wasn't a fan of arrays but in JavaScript are very useful.
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+I want to keep encapsulating my code into functions, writing more clean code and improving my problem solving skills.
 
 ## Author
 
 - Github - [Leidi De La Puente](https://github.com/leidi2004)
 - Frontend Mentor - [@leidi2004](https://www.frontendmentor.io/profile/leidi2004)
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
