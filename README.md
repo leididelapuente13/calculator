@@ -81,5 +81,5 @@ I want to keep encapsulating my code into functions, writing more clean code and
 
 ## Author
 
-- Github - [Leidi De La Puente](https://github.com/leidi2004)
-- Frontend Mentor - [@leidi2004](https://www.frontendmentor.io/profile/leidi2004)
+- Github - [Leidi De La Puente](https://github.com/leididelapuente13)
+- Frontend Mentor - [@leididelapuente13](https://www.frontendmentor.io/profile/leididelapuente13)
